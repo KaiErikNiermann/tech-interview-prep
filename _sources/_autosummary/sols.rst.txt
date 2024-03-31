@@ -28,6 +28,7 @@
    :recursive:
 
    sols.contains_duplicate
+   sols.group_anagrams
    sols.two_sum
    sols.valid_anagram
 

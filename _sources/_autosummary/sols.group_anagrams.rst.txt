@@ -1,0 +1,29 @@
+sols.group\_anagrams
+====================
+
+.. automodule:: sols.group_anagrams
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Solution
+   
+   
+
+   
+   
+   
+
+
+
