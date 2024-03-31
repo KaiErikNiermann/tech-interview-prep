@@ -1,0 +1,29 @@
+sols.valid\_anagram
+===================
+
+.. automodule:: sols.valid_anagram
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Solution
+   
+   
+
+   
+   
+   
+
+
+

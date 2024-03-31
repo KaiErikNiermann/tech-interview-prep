@@ -1,0 +1,29 @@
+sols.contains\_duplicate
+========================
+
+.. automodule:: sols.contains_duplicate
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Solution
+   
+   
+
+   
+   
+   
+
+
+

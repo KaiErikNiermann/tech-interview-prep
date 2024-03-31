@@ -1,0 +1,29 @@
+sols.two\_sum
+=============
+
+.. automodule:: sols.two_sum
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Solution
+   
+   
+
+   
+   
+   
+
+
+

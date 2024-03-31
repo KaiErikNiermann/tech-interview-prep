@@ -1,0 +1,33 @@
+﻿sols
+====
+
+.. automodule:: sols
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   sols.contains_duplicate
+   sols.two_sum
+   sols.valid_anagram
+
