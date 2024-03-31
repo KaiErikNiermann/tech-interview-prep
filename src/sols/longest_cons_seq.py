@@ -6,8 +6,8 @@ class Solution:
         """
         ### Thought process
         - Use `set()` for O(1) lookups of neighbors
-        - Logic is: if `n` has no L neighbor `=>` start of sequence otherwise keep incrementing
-        - If start of sequence found then keep incrementing till no R neighbor found
+        - Logic is: if `n` has no Left neighbor `=>` start of sequence otherwise keep incrementing
+        - If start of sequence found then keep incrementing till no Right neighbor found
         - Keep track of longest sequence found
         - Basic idea is just to find max length of sequence by recognizing start (n - 1 not in set) and end (n + length (+1) not in set)
         
