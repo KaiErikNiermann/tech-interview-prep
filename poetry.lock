@@ -609,6 +609,20 @@ lint = ["docutils-stubs", "flake8 (>=3.5.0)", "flake8-simplify", "isort", "mypy 
 test = ["cython (>=3.0)", "filelock", "html5lib", "pytest (>=4.6)", "setuptools (>=67.0)"]
 
 [[package]]
+name = "sphinx-math-dollar"
+version = "1.2.1"
+description = "Sphinx extension to let you write LaTeX math using $$"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "sphinx-math-dollar-1.2.1.tar.gz", hash = "sha256:03427240f21fdf23c7b8415289aa1a0e307ac32c198e02f840c59a4b1b0d950c"},
+    {file = "sphinx_math_dollar-1.2.1-py3-none-any.whl", hash = "sha256:0b1523a4d7023b9020ddf3a9301f651d64427a0f1d802af534a87eaf24fbdf19"},
+]
+
+[package.dependencies]
+sphinx = "*"
+
+[[package]]
 name = "sphinxcontrib-applehelp"
 version = "1.0.8"
 description = "sphinxcontrib-applehelp is a Sphinx extension which outputs Apple help books"
@@ -722,4 +736,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "ddcbcad8337a03b0e98cc524375a4f4c1ee08e54eb913213a574a6faef117155"
+content-hash = "c93fad4ac173f1bc60e0806e4f324b93f5a8a4e623dcabc110e5cc673d2b2675"

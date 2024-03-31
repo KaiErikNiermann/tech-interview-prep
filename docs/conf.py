@@ -45,7 +45,9 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
-    'myst_parser'
+    'myst_parser', 
+    'sphinx.ext.mathjax', 
+    'sphinx_math_dollar'
 ]
 
 autosummary_generate = True

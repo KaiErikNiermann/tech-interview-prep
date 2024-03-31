@@ -28,11 +28,11 @@ class Solution:
     def isAnagramSort(self, s: str, t: str) -> bool:
         """
         ### The basic thought process is the following
-        - Triviall if the words have a different length we return False 
+        - Trivially if the words have a different length we return False 
         - We sort the words and compare them
         
         ### Notes 
-        - time complexity: O(n^2) -> O(nlogn) 
+        - time complexity: $O(n^2)$ -> O(nlogn) 
         - space complexity: O(n) -> O(1)
         
         """
