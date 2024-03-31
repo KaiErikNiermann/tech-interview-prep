@@ -3,6 +3,7 @@ from src.sols import valid_anagram
 from src.sols import two_sum
 from src.sols import group_anagrams
 from src.sols import top_k_frequent
+from src.sols import prod_arr_except_self
 
 import unittest
 
@@ -33,6 +34,11 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(top_k_frequent.Solution().topKFrequent([1,1,1,2,2,3], 2), [1, 2])
         self.assertEqual(top_k_frequent.Solution().topKFrequent([1], 1), [1])
         self.assertEqual(top_k_frequent.Solution().topKFrequent([1,2,3,4,5,6,7,8,9,10], 10), [1,2,3,4,5,6,7,8,9,10])
+        
+    def test_prod_arr_except_self(self):
+        self.assertEqual(prod_arr_except_self.Solution().productExceptSelf([1,2,3,4]), [24,12,8,6])
+        self.assertEqual(prod_arr_except_self.Solution().productExceptSelf([1,2,3,4,5]), [120,60,40,30,24])
+        self.assertEqual(prod_arr_except_self.Solution().productExceptSelf([1,2,3,4,5,6]), [720,360,240,180,144,120])
         
 if __name__ == '__main__':
     unittest.main()
