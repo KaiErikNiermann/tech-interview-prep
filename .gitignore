@@ -1,0 +1,25 @@
+# python stuff 
+.venv
+src/sols/__pycache__/
+src/tests/__pycache__/
+
+# sphinx stuff 
+/docs/_build/
+/docs/_static/
+/docs/_templates/
+/docs/_autosummary/
+/docs/_cache/
+/docs/_modules/
+/docs/_sources/
+/docs/_output/
+/docs/doctrees/
+/docs/html/
+/docs/latex/
+/docs/epub/
+/docs/text/
+/docs/man/
+/docs/texinfo/
+/docs/_downloads/
+/docs/_images/
+/docs/.buildinfo
+/docs/.doctrees/

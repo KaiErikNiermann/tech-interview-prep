@@ -1,4 +1,4 @@
-# List of materials collected
+# Collected materials
 
 ## textbooks 
 > [**collection**](https://drive.google.com/drive/folders/1CljGBW5Jc2Ysz90IT9F7q8LdKlksVBH_?usp=sharing)
