@@ -7,6 +7,7 @@
     <title>sols.group_anagrams &#8212; tech-interview-prep  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=883071f8" />
     <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -30,10 +31,60 @@
           <div class="body" role="main">
             
   <h1>Source code for sols.group_anagrams</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 <div class="viewcode-block" id="Solution">
 <a class="viewcode-back" href="../../_autosummary/sols.group_anagrams.html#sols.group_anagrams.Solution">[docs]</a>
-<span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span> 
-    <span class="k">pass</span> </div>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span> 
+<div class="viewcode-block" id="Solution.groupAnagrams">
+<a class="viewcode-back" href="../../_autosummary/sols.group_anagrams.html#sols.group_anagrams.Solution.groupAnagrams">[docs]</a>
+    <span class="k">def</span> <span class="nf">groupAnagrams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        ### Thought process </span>
+<span class="sd">        - `res` stores word frequency -&gt; list of words</span>
+<span class="sd">        - `defaultdict(list)` is a dict that initalizes to list, avoids edge case of key not in dict</span>
+<span class="sd">        - We iterate through the words  </span>
+<span class="sd">        - We create a count of the frequency of each character in the word</span>
+<span class="sd">        - We convert the count to a tuple to make it hashable (potentially unecessary in other langs)</span>
+<span class="sd">        - `ord(c) - ord(&#39;a&#39;)` maps the ascii value of the character to a number between 0-25, this gives us the index to store the count</span>
+<span class="sd">        - `count[ord(c) - ord(&#39;a&#39;)] += 1` increments the count of the character</span>
+<span class="sd">        </span>
+<span class="sd">        ### Notes</span>
+<span class="sd">        - time complexity: $O(m\\times n)$ where $m$ is the number of words and $n$ is average the length of the word</span>
+<span class="sd">        - space complexity: $O(m)$</span>
+<span class="sd">        &gt; Interestingly enough this algorithm actually runs slower than using `sorted` in python, I&#39;m not sure why, `sorted` uses Timsort which has a best case TC of $\\Omega(n)$ and worst case of $O(n\\log n)$ so in theory it should at most be the same speed as this but apparently not, could be that there are other optimizations with `sorted` that I&#39;m not aware of</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">strs</span><span class="p">:</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">26</span> <span class="c1"># 26 letters in the alphabet</span>
+            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+                <span class="n">count</span><span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)]</span> <span class="o">+=</span> <span class="mi">1</span>
+                
+            <span class="n">res</span><span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">count</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">values</span><span class="p">())</span></div>
+
+        
+<div class="viewcode-block" id="Solution.groupAnagramsSorting">
+<a class="viewcode-back" href="../../_autosummary/sols.group_anagrams.html#sols.group_anagrams.Solution.groupAnagramsSorting">[docs]</a>
+    <span class="k">def</span> <span class="nf">groupAnagramsSorting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        ### Thought process </span>
+<span class="sd">        - Similarly for the basic anagram problem, if we sort the words we can group them together </span>
+<span class="sd">        - We can use a dictionary to store the sorted word -&gt; list of words</span>
+<span class="sd">        </span>
+<span class="sd">        ### Notes </span>
+<span class="sd">        - time complexity: $O(m\\times n\\log n)$ where $m$ is the number of words and $n$ is average the length of the word</span>
+<span class="sd">        - space complexity: $O(m)$</span>
+<span class="sd">        </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">strs</span><span class="p">:</span>
+            <span class="n">res</span><span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">word</span><span class="p">))]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">values</span><span class="p">())</span></div>
+</div>
 
 </pre></div>
 
