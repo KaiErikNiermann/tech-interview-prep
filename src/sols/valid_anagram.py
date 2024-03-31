@@ -4,7 +4,7 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         """
         ### The basic thought process is the following
-        - Triviall if the words have a different length we return False 
+        - Trivially if the words have a different length we return False 
         - We create two dictionaries to store the frequency of each character in the words
         - We compare the dictionaries to see if they are equal
         
