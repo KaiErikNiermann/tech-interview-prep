@@ -1,8 +1,33 @@
-# tech-interview-prep
+# Interview Preparation Materials
 
-I collected some of the resoureces I used / am using for interview prep here, hopefully this can help others in their job application journey. 
+This project is a collection of materials aimed at helping individuals prepare for technical interviews, particularly focusing on algorithms and data structures.
 
-## directories 
+## Directory Structure
 
-- `materials/` contains some books I found helpful, covering everything from how to prep for behavioral interviews and how to talk through different technical solutions to most aspects of DSA necessary to pass technical interviews 
-- `sols/` contains solutions to common programming problems with some annotations behind the general line of thinking 
+- **src**: Contains Python source code for various algorithms and solutions to common interview problems.
+- **tests**: Includes unit tests for the code in the `src` directory.
+- **materials**: Contains additional study materials and resources for interview preparation.
+
+## Running Tests
+
+To run the tests, execute the following command from the project root directory:
+
+```bash
+python -m unittest src/tests/tests.py
+```
+
+## Documentation
+
+The documentation for this project is hosted using Sphinx. You can find the documentation files in the `docs` directory. To view the documentation, open the HTML files located in `docs/_build/html` using a web browser.
+
+To rebuild the documentation with any updates, you can use Sphinx's `make` command. From the `docs` directory, run:
+
+```bash
+make html
+```
+
+After rebuilding, you can view the updated documentation by opening the HTML files in `docs/_build/html` using a web browser.
+
+## Contributing 
+
+Feel free to contribute to any part of this project. If you spot any problems open an issue or submit a PR.
