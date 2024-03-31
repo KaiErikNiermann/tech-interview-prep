@@ -39,7 +39,32 @@
 <div class="viewcode-block" id="Solution.productExceptSelf">
 <a class="viewcode-back" href="../../_autosummary/sols.prod_arr_except_self.html#sols.prod_arr_except_self.Solution.productExceptSelf">[docs]</a>
     <span class="k">def</span> <span class="nf">productExceptSelf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-        <span class="k">pass</span></div>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        ### Thought process</span>
+<span class="sd">        - We do two passes to calculate all the pre and post products</span>
+<span class="sd">        - Given an array $[a, b, c, d]$, the first pass is computed as $[1, (a), (ab), (abc)]$</span>
+<span class="sd">        - The second pass is computed as $[(1)[bcd], (a)[cd], (ab)[d], (abc)]$</span>
+<span class="sd">        - The result of these two passes gives us the answer</span>
+<span class="sd">        - Its just doing the cumulative product forward then backward</span>
+<span class="sd">        </span>
+<span class="sd">        ### Notes </span>
+<span class="sd">        - time complexity: $O(n)$</span>
+<span class="sd">        - space complexity: $O(n)$</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+        <span class="n">pre</span> <span class="o">=</span> <span class="mi">1</span>
+        
+        <span class="c1"># pre pass</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">pre</span>
+            <span class="n">pre</span> <span class="o">*=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">post</span> <span class="o">=</span> <span class="mi">1</span>
+        
+        <span class="c1"># post pass</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*=</span> <span class="n">post</span>
+            <span class="n">post</span> <span class="o">*=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">res</span></div>
 </div>
 
 </pre></div>

@@ -29,6 +29,7 @@
 
    sols.contains_duplicate
    sols.group_anagrams
+   sols.longest_cons_seq
    sols.prod_arr_except_self
    sols.top_k_frequent
    sols.two_sum

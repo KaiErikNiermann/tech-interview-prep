@@ -12,10 +12,11 @@
     <script src="../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="sols.top_k_frequent" href="sols.top_k_frequent.html" />
-    <link rel="prev" title="sols.group_anagrams" href="sols.group_anagrams.html" />
+    <link rel="prev" title="sols.longest_cons_seq" href="sols.longest_cons_seq.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -49,7 +50,24 @@
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="sols.prod_arr_except_self.Solution.productExceptSelf">
 <span class="sig-name descname"><span class="pre">productExceptSelf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/sols/prod_arr_except_self.html#Solution.productExceptSelf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sols.prod_arr_except_self.Solution.productExceptSelf" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><section id="thought-process">
+<h2>Thought process<a class="headerlink" href="#thought-process" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>We do two passes to calculate all the pre and post products</p></li>
+<li><p>Given an array <span class="math notranslate nohighlight">\([a, b, c, d]\)</span>, the first pass is computed as <span class="math notranslate nohighlight">\([1, (a), (ab), (abc)]\)</span></p></li>
+<li><p>The second pass is computed as <span class="math notranslate nohighlight">\([(1)[bcd], (a)[cd], (ab)[d], (abc)]\)</span></p></li>
+<li><p>The result of these two passes gives us the answer</p></li>
+<li><p>Its just doing the cumulative product forward then backward</p></li>
+</ul>
+</section>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>time complexity: <span class="math notranslate nohighlight">\(O(n)\)</span></p></li>
+<li><p>space complexity: <span class="math notranslate nohighlight">\(O(n)\)</span></p></li>
+</ul>
+</section>
+</dd></dl>
 
 </dd></dl>
 
@@ -80,6 +98,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="sols.html">sols</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sols.contains_duplicate.html">sols.contains_duplicate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sols.group_anagrams.html">sols.group_anagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sols.longest_cons_seq.html">sols.longest_cons_seq</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">sols.prod_arr_except_self</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#sols.prod_arr_except_self.Solution"><code class="docutils literal notranslate"><span class="pre">Solution</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#sols.prod_arr_except_self.Solution.productExceptSelf"><code class="docutils literal notranslate"><span class="pre">Solution.productExceptSelf()</span></code></a></li>
@@ -99,7 +118,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="sols.html">sols</a><ul>
-      <li>Previous: <a href="sols.group_anagrams.html" title="previous chapter">sols.group_anagrams</a></li>
+      <li>Previous: <a href="sols.longest_cons_seq.html" title="previous chapter">sols.longest_cons_seq</a></li>
       <li>Next: <a href="sols.top_k_frequent.html" title="next chapter">sols.top_k_frequent</a></li>
   </ul></li>
   </ul></li>

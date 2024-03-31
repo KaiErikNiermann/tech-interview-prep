@@ -1,0 +1,29 @@
+sols.longest\_cons\_seq
+=======================
+
+.. automodule:: sols.longest_cons_seq
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Solution
+   
+   
+
+   
+   
+   
+
+
+
