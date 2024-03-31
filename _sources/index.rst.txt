@@ -25,6 +25,8 @@ Indices and tables
 Modules
 -------
 
+To see a list of worked out solutions for common interview problems see the `sols` module.
+
 .. autosummary::
    :toctree: _autosummary
    :recursive:
