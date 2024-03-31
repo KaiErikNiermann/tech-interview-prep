@@ -29,6 +29,8 @@
 
    sols.contains_duplicate
    sols.group_anagrams
+   sols.prod_arr_except_self
+   sols.top_k_frequent
    sols.two_sum
    sols.valid_anagram
 

@@ -1,0 +1,29 @@
+sols.top\_k\_frequent
+=====================
+
+.. automodule:: sols.top_k_frequent
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Solution
+   
+   
+
+   
+   
+   
+
+
+
