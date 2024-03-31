@@ -5,7 +5,6 @@ src/tests/__pycache__/
 
 # sphinx stuff 
 /docs/_build/
-/docs/_static/
 /docs/_templates/
 /docs/_autosummary/
 /docs/_cache/

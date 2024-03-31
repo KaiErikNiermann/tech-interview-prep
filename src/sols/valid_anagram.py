@@ -3,14 +3,14 @@ from collections import Counter
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         """
-        ### The basic thought process is the following
+        ### Thought process
         - Trivially if the words have a different length we return False 
         - We create two dictionaries to store the frequency of each character in the words
         - We compare the dictionaries to see if they are equal
         
         ### Notes 
-        - time complexity: O(n)
-        - space complexity: O(n)
+        - time complexity: $O(n)$
+        - space complexity: $O(n)$
         
         """
         if len(s) != len(t):
@@ -27,13 +27,13 @@ class Solution:
     
     def isAnagramSort(self, s: str, t: str) -> bool:
         """
-        ### The basic thought process is the following
+        ### Thought process
         - Trivially if the words have a different length we return False 
         - We sort the words and compare them
         
         ### Notes 
-        - time complexity: $O(n^2)$ -> O(nlogn) 
-        - space complexity: O(n) -> O(1)
+        - time complexity: $O(n^2)$ -> $O(n\\logn)$ 
+        - space complexity: $O(n)$ -> $O(1)$
         
         """
         if len(s) != len(t):

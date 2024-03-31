@@ -1,6 +1,8 @@
 from src.sols import contains_duplicate
 from src.sols import valid_anagram
 from src.sols import two_sum
+from src.sols import group_anagrams
+
 import unittest
 
 class TestSolutions(unittest.TestCase):
@@ -20,6 +22,11 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(two_sum.Solution().twoSum([2,7,11,15], 9), [0, 1])
         self.assertEqual(two_sum.Solution().twoSum([3,2,4], 6), [1, 2])
         self.assertEqual(two_sum.Solution().twoSum([3,3], 6), [0, 1])
+        
+    def test_group_anagrams(self):
+        self.assertEqual(group_anagrams.Solution().groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]), [["eat","tea","ate"],["tan","nat"],["bat"]])
+        self.assertEqual(group_anagrams.Solution().groupAnagrams(["a"]), [["a"]])
+        self.assertEqual(group_anagrams.Solution().groupAnagrams([""]), [[""]])
         
 if __name__ == '__main__':
     unittest.main()

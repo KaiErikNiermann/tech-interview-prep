@@ -3,7 +3,7 @@ from typing import List
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         """
-        ### Basic thought process is the following 
+        ### Thought process
         - Create a set to store unique numbers 
         - Python `set()` has O(1) lookup 
         - If the number is already in the set, return True
@@ -11,6 +11,7 @@ class Solution:
         ### Notes 
         - time complexity: O(n)
         - space complexity: O(n)
+        
         """
         hashset = set()
 
