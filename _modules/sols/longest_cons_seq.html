@@ -46,7 +46,7 @@
 <span class="sd">        - Logic is: if `n` has no L neighbor `=&gt;` start of sequence otherwise keep incrementing</span>
 <span class="sd">        - If start of sequence found then keep incrementing till no R neighbor found</span>
 <span class="sd">        - Keep track of longest sequence found</span>
-<span class="sd">        - Basic idea is just to find max length of sequence by recognizing start (n - 1 not in set) and end (n + 1 not in set)</span>
+<span class="sd">        - Basic idea is just to find max length of sequence by recognizing start (n - 1 not in set) and end (n + length (+1) not in set)</span>
 <span class="sd">        </span>
 <span class="sd">        ### Notes </span>
 <span class="sd">        - time complexity : $O(n)$ </span>
@@ -55,12 +55,13 @@
         <span class="n">nums_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
         <span class="n">longest</span> <span class="o">=</span> <span class="mi">0</span> 
         
-        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nums_set</span><span class="p">:</span> 
-            <span class="c1"># no left neighbor -&gt; start of seq</span>
-            <span class="k">if</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">nums_set</span><span class="p">:</span> 
-                <span class="n">length</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="c1"># no left neighbor =&gt; start of seq</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">nums_set</span><span class="p">:</span> 
+                
                 <span class="c1"># find the length of the sequence</span>
-                <span class="k">while</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span> <span class="ow">in</span> <span class="n">nums_set</span><span class="p">:</span> 
+                <span class="n">length</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="n">length</span><span class="p">)</span> <span class="ow">in</span> <span class="n">nums_set</span><span class="p">:</span> 
                     <span class="n">length</span> <span class="o">+=</span> <span class="mi">1</span>
                 <span class="n">longest</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">longest</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
                 
