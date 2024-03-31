@@ -15,3 +15,17 @@ blockquote p {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+li > p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 15px !important; 
+    margin-bottom: 10px;
+}
+
+dl {
+    margin-bottom: 2em;
+}

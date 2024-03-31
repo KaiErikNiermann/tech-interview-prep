@@ -5,7 +5,7 @@ class Solution():
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         """
         ### Thought process
-        - Place elements into frequency buckets [index -> [n1, ..., n2]] where `index` is the frequency of the numbers and `[n1, ..., n2]` are the numbers that have that frequency
+        - Place elements into frequency buckets `[index -> [n1, ..., n2]]` where `index` is the frequency of the numbers and `[n1, ..., n2]` are the numbers that have that frequency
         - Return the last k elements
         
         ### Notes 
