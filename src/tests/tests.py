@@ -2,6 +2,7 @@ from src.sols import contains_duplicate
 from src.sols import valid_anagram
 from src.sols import two_sum
 from src.sols import group_anagrams
+from src.sols import top_k_frequent
 
 import unittest
 
@@ -27,6 +28,11 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(group_anagrams.Solution().groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]), [["eat","tea","ate"],["tan","nat"],["bat"]])
         self.assertEqual(group_anagrams.Solution().groupAnagrams(["a"]), [["a"]])
         self.assertEqual(group_anagrams.Solution().groupAnagrams([""]), [[""]])
+        
+    def test_top_k_frequent(self):
+        self.assertEqual(top_k_frequent.Solution().topKFrequent([1,1,1,2,2,3], 2), [1, 2])
+        self.assertEqual(top_k_frequent.Solution().topKFrequent([1], 1), [1])
+        self.assertEqual(top_k_frequent.Solution().topKFrequent([1,2,3,4,5,6,7,8,9,10], 10), [1,2,3,4,5,6,7,8,9,10])
         
 if __name__ == '__main__':
     unittest.main()

@@ -15,6 +15,8 @@ class Solution:
         ### Notes
         - time complexity: $O(m\\times n)$ where $m$ is the number of words and $n$ is average the length of the word
         - space complexity: $O(m)$
+        
+        
         > Interestingly enough this algorithm actually runs slower than using `sorted` in python, I'm not sure why, `sorted` uses Timsort which has a best case TC of $\\Omega(n)$ and worst case of $O(n\\log n)$ so in theory it should at most be the same speed as this but apparently not, could be that there are other optimizations with `sorted` that I'm not aware of
         """
         res = defaultdict(list)
@@ -37,7 +39,6 @@ class Solution:
         ### Notes 
         - time complexity: $O(m\\times n\\log n)$ where $m$ is the number of words and $n$ is average the length of the word
         - space complexity: $O(m)$
-        
         """
         res = defaultdict(list)
         for word in strs:

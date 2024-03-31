@@ -5,7 +5,7 @@ blockquote {
 
 /* Common styles for callouts */
 blockquote {
-    padding: 5px;
+    padding: 10px 20px 10px 20px;
     margin: 10px 0;
     border-radius: 3px;
 }
@@ -13,4 +13,5 @@ blockquote {
 /* Style for the heading of the callout */
 blockquote p {
     margin-top: 0;
+    margin-bottom: 0;
 }
