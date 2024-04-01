@@ -13,7 +13,7 @@ This project is a collection of materials aimed at helping individuals prepare f
 To run the tests, execute the following command from the project root directory:
 
 ```bash
-python -m unittest src/tests/tests.py
+poetry run pytest tests/tests.py
 ```
 
 ## Documentation

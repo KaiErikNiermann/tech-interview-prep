@@ -42,5 +42,5 @@ jobs:
 
     # install pytest 
     - name: Run tests
-      run: poetry run python -m unittest src/tests/test.py
+      run: poetry run pytest tests/tests.py 
 

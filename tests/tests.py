@@ -1,11 +1,11 @@
-from src.sols import contains_duplicate
-from src.sols import valid_anagram
-from src.sols import two_sum
-from src.sols import group_anagrams
-from src.sols import top_k_frequent
-from src.sols import prod_arr_except_self
-from src.sols import longest_cons_seq
-from src.sols import valid_palindrome
+from src import contains_duplicate
+from src import valid_anagram
+from src import two_sum
+from src import group_anagrams
+from src import top_k_frequent
+from src import prod_arr_except_self
+from src import longest_cons_seq
+from src import valid_palindrome
 
 import unittest
 import timeout_decorator

@@ -9,11 +9,13 @@ Technical interview prep materials
 Contents:
 ---------
 
-.. toctree::
+.. toctree:: 
    :maxdepth: 2
-   :caption: 
+   :caption: Contents
 
    MATERIALS.md
+   src
+
 
 Indices and tables
 ==================
@@ -25,11 +27,10 @@ Indices and tables
 Modules
 -------
 
-To see a list of worked out solutions for common interview problems see the `sols` module.
+To see a list of worked out solutions for common interview problems see the `src` module.
 
 .. autosummary::
    :toctree: _autosummary
    :recursive:
-
-   sols
    
+   src
