@@ -1,7 +1,7 @@
-from typing import List
 from collections import defaultdict
+from functools import cache
 class Solution: 
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
         """
         ### Thought process 
         - `res` stores word frequency -> list of words
@@ -16,8 +16,7 @@ class Solution:
         - time complexity: $O(m\\times n)$ where $m$ is the number of words and $n$ is average the length of the word
         - space complexity: $O(m)$
         
-        
-        > Interestingly enough this algorithm actually runs slower than using `sorted` in python, I'm not sure why, `sorted` uses Timsort which has a best case TC of $\\Omega(n)$ and worst case of $O(n\\log n)$ so in theory it should at most be the same speed as this but apparently not, could be that there are other optimizations with `sorted` that I'm not aware of
+        > Interestingly enough, this solution in practice actually appears to be *slower* than the solution using `sorting()` honestly im not too sure why. One reason a friend of mine come up with is that for short words the complexity reduces to `O(n\\log n)` though in testing it seems even with considerably large words sorting seems to be faster, additionally this seems to hold for some other languages. For python the algorithm used past 3.11 is [nearly optimal mergesort](https://www.wild-inter.net/publications/munro-wild-2018). If anyone knows why its seemingly faster than counting do tell.
         """
         res = defaultdict(list)
         
@@ -30,7 +29,7 @@ class Solution:
             
         return list(res.values())
         
-    def groupAnagramsSorting(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagramsSorting(self, strs: list[str]) -> list[list[str]]:
         """
         ### Thought process 
         - Similarly for the basic anagram problem, if we sort the words we can group them together 
@@ -43,5 +42,22 @@ class Solution:
         res = defaultdict(list)
         for word in strs:
             res[tuple(sorted(word))].append(word)
+            
+        return list(res.values())
+    
+    
+    def groupAnagramsFast(self, strs: list[str]) -> list[list[str]]:
+        """
+        ### Thought process
+        - We can cache the key creation function to avoid recomputing the key
+        - Rest of the code is the same as before
+        """
+        @cache 
+        def make_key(s):
+            return tuple(sorted(s))
+        
+        res = defaultdict(list)
+        for word in strs:
+            res[make_key(word)].append(word)
             
         return list(res.values())

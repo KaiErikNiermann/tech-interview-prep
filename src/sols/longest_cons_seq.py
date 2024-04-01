@@ -1,8 +1,6 @@
 from collections import defaultdict
-from typing import List
-
 class Solution:
-    def longestConsecutive(self, nums: List[int]) -> int:
+    def longestConsecutive(self, nums: list[int]) -> int:
         """
         ### Thought process
         - Use `set()` for O(1) lookups of neighbors

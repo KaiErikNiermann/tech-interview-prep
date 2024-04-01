@@ -1,7 +1,5 @@
-from typing import List
-
 class Solution:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
+    def productExceptSelf(self, nums: list[int]) -> list[int]:
         """
         ### Thought process
         - We do two passes to calculate all the pre and post products

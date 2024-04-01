@@ -1,8 +1,6 @@
-from typing import List
 from collections import defaultdict
-
 class Solution(): 
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+    def topKFrequent(self, nums: list[int], k: int) -> list[int]:
         """
         ### Thought process
         - Place elements into frequency buckets `[index -> [n1, ..., n2]]` where `index` is the frequency of the numbers and `[n1, ..., n2]` are the numbers that have that frequency
@@ -31,7 +29,7 @@ class Solution():
                 if len(res) == k:
                     return res
     
-    def topKFrequentCompact(self, nums: List[int], k: int) -> List[int]:
+    def topKFrequentCompact(self, nums: list[int], k: int) -> list[int]:
         """
         ### Thought process 
         - We can use a dictionary to store the frequency of each number

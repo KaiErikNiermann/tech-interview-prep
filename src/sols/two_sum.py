@@ -1,7 +1,5 @@
-from typing import List
-
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
         """
         ### Thought process
         - We create a dictionary to store value -> index 

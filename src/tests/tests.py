@@ -5,6 +5,7 @@ from src.sols import group_anagrams
 from src.sols import top_k_frequent
 from src.sols import prod_arr_except_self
 from src.sols import longest_cons_seq
+from src.sols import valid_palindrome
 
 import unittest
 import timeout_decorator
@@ -54,5 +55,12 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(longest_cons_seq.Solution().longestConsecutive([0,3,7,2,5,8,4,6,0,1]), 9)
         self.assertEqual(longest_cons_seq.Solution().longestConsecutive([1,2,0,1]), 3)
         
+    @timeout_decorator.timeout(3)
+    def test_valid_palindrome(self):
+        self.assertEqual(valid_palindrome.Solution().isPalindrome("ada"), True)
+        self.assertEqual(valid_palindrome.Solution().isPalindrome("adaa"), False)
+        self.assertEqual(valid_palindrome.Solution().isPalindrome("adaada"), True)
+                         
+                         
 if __name__ == '__main__':
     unittest.main()
