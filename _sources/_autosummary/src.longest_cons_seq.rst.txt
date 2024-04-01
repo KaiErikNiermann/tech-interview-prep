@@ -1,7 +1,7 @@
-sols.prod\_arr\_except\_self
-============================
+src.longest\_cons\_seq
+======================
 
-.. automodule:: sols.prod_arr_except_self
+.. automodule:: src.longest_cons_seq
 
    
    

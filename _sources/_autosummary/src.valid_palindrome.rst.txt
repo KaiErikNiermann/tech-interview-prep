@@ -1,7 +1,7 @@
-sols.valid\_palindrome
-======================
+src.valid\_palindrome
+=====================
 
-.. automodule:: sols.valid_palindrome
+.. automodule:: src.valid_palindrome
 
    
    

@@ -1,7 +1,7 @@
-sols.contains\_duplicate
-========================
+src.top\_k\_frequent
+====================
 
-.. automodule:: sols.contains_duplicate
+.. automodule:: src.top_k_frequent
 
    
    

@@ -1,7 +1,7 @@
-sols.top\_k\_frequent
-=====================
+src.valid\_anagram
+==================
 
-.. automodule:: sols.top_k_frequent
+.. automodule:: src.valid_anagram
 
    
    

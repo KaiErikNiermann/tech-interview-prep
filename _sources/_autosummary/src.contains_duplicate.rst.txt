@@ -1,7 +1,7 @@
-sols.three\_sum
-===============
+src.contains\_duplicate
+=======================
 
-.. automodule:: sols.three_sum
+.. automodule:: src.contains_duplicate
 
    
    

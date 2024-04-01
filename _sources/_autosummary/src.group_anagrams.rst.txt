@@ -1,7 +1,7 @@
-sols.two\_sum
-=============
+src.group\_anagrams
+===================
 
-.. automodule:: sols.two_sum
+.. automodule:: src.group_anagrams
 
    
    

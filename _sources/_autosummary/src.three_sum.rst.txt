@@ -1,7 +1,7 @@
-sols.valid\_anagram
-===================
+src.three\_sum
+==============
 
-.. automodule:: sols.valid_anagram
+.. automodule:: src.three_sum
 
    
    
