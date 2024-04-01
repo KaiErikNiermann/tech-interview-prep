@@ -1,0 +1,29 @@
+sols.three\_sum
+===============
+
+.. automodule:: sols.three_sum
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Solution
+   
+   
+
+   
+   
+   
+
+
+

@@ -11,7 +11,7 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :caption: I made this page to just personally document resources and solutions as preperation for technical interviews. There are a bunch of other good guides out there but I hope this can act as a nice quick reference for those who need it.
+   :caption: 
 
    MATERIALS.md
 

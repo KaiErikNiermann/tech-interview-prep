@@ -1,0 +1,29 @@
+sols.valid\_palindrome
+======================
+
+.. automodule:: sols.valid_palindrome
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Solution
+   
+   
+
+   
+   
+   
+
+
+

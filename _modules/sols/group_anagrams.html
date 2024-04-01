@@ -31,14 +31,14 @@
           <div class="body" role="main">
             
   <h1>Source code for sols.group_anagrams</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">cache</span>
 <div class="viewcode-block" id="Solution">
 <a class="viewcode-back" href="../../_autosummary/sols.group_anagrams.html#sols.group_anagrams.Solution">[docs]</a>
 <span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span> 
 <div class="viewcode-block" id="Solution.groupAnagrams">
 <a class="viewcode-back" href="../../_autosummary/sols.group_anagrams.html#sols.group_anagrams.Solution.groupAnagrams">[docs]</a>
-    <span class="k">def</span> <span class="nf">groupAnagrams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+    <span class="k">def</span> <span class="nf">groupAnagrams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        ### Thought process </span>
 <span class="sd">        - `res` stores word frequency -&gt; list of words</span>
@@ -53,8 +53,7 @@
 <span class="sd">        - time complexity: $O(m\\times n)$ where $m$ is the number of words and $n$ is average the length of the word</span>
 <span class="sd">        - space complexity: $O(m)$</span>
 <span class="sd">        </span>
-<span class="sd">        </span>
-<span class="sd">        &gt; Interestingly enough this algorithm actually runs slower than using `sorted` in python, I&#39;m not sure why, `sorted` uses Timsort which has a best case TC of $\\Omega(n)$ and worst case of $O(n\\log n)$ so in theory it should at most be the same speed as this but apparently not, could be that there are other optimizations with `sorted` that I&#39;m not aware of</span>
+<span class="sd">        &gt; Interestingly enough, this solution in practice actually appears to be *slower* than the solution using `sorting()` honestly im not too sure why. One reason a friend of mine come up with is that for short words the complexity reduces to `O(n\\log n)` though in testing it seems even with considerably large words sorting seems to be faster, additionally this seems to hold for some other languages. For python the algorithm used past 3.11 is [nearly optimal mergesort](https://www.wild-inter.net/publications/munro-wild-2018). If anyone knows why its seemingly faster than counting do tell.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">res</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
         
@@ -70,7 +69,7 @@
         
 <div class="viewcode-block" id="Solution.groupAnagramsSorting">
 <a class="viewcode-back" href="../../_autosummary/sols.group_anagrams.html#sols.group_anagrams.Solution.groupAnagramsSorting">[docs]</a>
-    <span class="k">def</span> <span class="nf">groupAnagramsSorting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+    <span class="k">def</span> <span class="nf">groupAnagramsSorting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        ### Thought process </span>
 <span class="sd">        - Similarly for the basic anagram problem, if we sort the words we can group them together </span>
@@ -83,6 +82,26 @@
         <span class="n">res</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">strs</span><span class="p">:</span>
             <span class="n">res</span><span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">word</span><span class="p">))]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">values</span><span class="p">())</span></div>
+
+    
+    
+<div class="viewcode-block" id="Solution.groupAnagramsFast">
+<a class="viewcode-back" href="../../_autosummary/sols.group_anagrams.html#sols.group_anagrams.Solution.groupAnagramsFast">[docs]</a>
+    <span class="k">def</span> <span class="nf">groupAnagramsFast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        ### Thought process</span>
+<span class="sd">        - We can cache the key creation function to avoid recomputing the key</span>
+<span class="sd">        - Rest of the code is the same as before</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nd">@cache</span> 
+        <span class="k">def</span> <span class="nf">make_key</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+        
+        <span class="n">res</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">strs</span><span class="p">:</span>
+            <span class="n">res</span><span class="p">[</span><span class="n">make_key</span><span class="p">(</span><span class="n">word</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
             
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">values</span><span class="p">())</span></div>
 </div>
@@ -105,10 +124,6 @@
 
 
 <h3>Navigation</h3>
-<p class="caption" role="heading"><span class="caption-text">I made this page to just personally document resources and solutions as preperation for technical interviews. There are a bunch of other good guides out there but I hope this can act as a nice quick reference for those who need it.</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../MATERIALS.html">Collected materials</a></li>
-</ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../_autosummary/sols.html">sols</a></li>
 </ul>

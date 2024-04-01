@@ -31,7 +31,9 @@
    sols.group_anagrams
    sols.longest_cons_seq
    sols.prod_arr_except_self
+   sols.three_sum
    sols.top_k_frequent
    sols.two_sum
    sols.valid_anagram
+   sols.valid_palindrome
 
