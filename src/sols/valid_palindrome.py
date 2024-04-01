@@ -69,7 +69,3 @@ class Solution:
             right -= 1
         
         return True
-
-print(Solution().isPalindromeTwoPoint("ad_a"))   
-print(Solution().isPalindromeTwoPoint("adaa"))   
-print(Solution().isPalindromeTwoPoint("abaa"))   

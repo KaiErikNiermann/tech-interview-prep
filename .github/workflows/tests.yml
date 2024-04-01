@@ -1,0 +1,41 @@
+name: Run tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12' # Specify the Python version you need
+
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+      env:
+        POETRY_HOME: ${{ runner.tool_cache }}/poetry
+      - name: Configure Poetry
+        run: |
+          echo "$POETRY_HOME/bin" >> $GITHUB_PATH
+
+    - name: Cache Poetry virtualenv
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pypoetry/virtualenvs
+        key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-poetry-
+
+    - name: Install dependencies
+      run: poetry install
+
+    - name: Run tests
+      run: python -m unittest src/tests/tests.py
