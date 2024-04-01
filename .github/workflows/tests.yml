@@ -41,4 +41,5 @@ jobs:
       run: poetry install
 
     - name: Run tests
-      run: python -m unittest src/tests/tests.py
+      run: poetry shell \ 
+        python -m unittest src/tests/tests.py
