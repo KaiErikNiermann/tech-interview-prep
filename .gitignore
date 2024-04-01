@@ -5,6 +5,8 @@ src/sols/__pycache__/
 src/sols/*.ipynb
 src/tests/__pycache__/
 
+tests/__pycache__/
+
 # sphinx stuff 
 /docs/_build/
 /docs/_templates/
