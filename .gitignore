@@ -1,4 +1,5 @@
 # python stuff 
+.pytest_cache/
 .venv
 src/sols/__pycache__/
 src/sols/*.ipynb

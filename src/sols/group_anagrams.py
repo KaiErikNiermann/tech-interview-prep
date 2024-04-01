@@ -16,7 +16,7 @@ class Solution:
         - time complexity: $O(m\\times n)$ where $m$ is the number of words and $n$ is average the length of the word
         - space complexity: $O(m)$
         
-        > Interestingly enough, this solution in practice actually appears to be *slower* than the solution using `sorting()` honestly im not too sure why. One reason a friend of mine come up with is that for short words the complexity reduces to `O(n\\log n)` though in testing it seems even with considerably large words sorting seems to be faster, additionally this seems to hold for some other languages. For python the algorithm used past 3.11 is [nearly optimal mergesort](https://www.wild-inter.net/publications/munro-wild-2018). If anyone knows why its seemingly faster than counting do tell.
+        > Interestingly enough, this solution in practice actually appears to be *slower* than the solution using `sorting()` honestly im not too sure why. One reason a friend of mine come up with is that for short words the complexity reduces to $O(n\\log n)$ though in testing it seems even with considerably large words sorting seems to be faster, additionally this seems to hold for some other languages. For python the algorithm used past 3.11 is [nearly optimal mergesort](https://www.wild-inter.net/publications/munro-wild-2018). If anyone knows why its seemingly faster than counting do tell.
         """
         res = defaultdict(list)
         

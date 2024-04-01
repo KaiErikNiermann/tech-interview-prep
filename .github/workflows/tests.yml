@@ -40,6 +40,7 @@ jobs:
     - name: Install dependencies
       run: poetry install
 
+    # install pytest 
     - name: Run tests
-      run: poetry shell \ 
-        python -m unittest src/tests/tests.py
+      run: poetry run python -m unittest src/tests/test.py
+
