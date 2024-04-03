@@ -1,0 +1,29 @@
+src.best\_buysell\_stock
+========================
+
+.. automodule:: src.best_buysell_stock
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Solution
+   
+   
+
+   
+   
+   
+
+
+

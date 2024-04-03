@@ -1,0 +1,23 @@
+src.longest\_rep\_char\_replacement
+===================================
+
+.. automodule:: src.longest_rep_char_replacement
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

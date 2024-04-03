@@ -1,5 +1,9 @@
 # collected materials
 
+## general guide and application info
+
+> [**guide page**](https://csdiscdocs.gitbook.io/vu-cs-amst-guide/cs-internships) includes information for the types of internships you are likely to encounter including some application strategies and general recommendations 
+
 ## textbooks 
 > [**collection**](https://drive.google.com/drive/folders/1CljGBW5Jc2Ysz90IT9F7q8LdKlksVBH_?usp=sharing)
 

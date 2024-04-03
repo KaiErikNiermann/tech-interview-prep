@@ -1,0 +1,29 @@
+src.most\_water\_container
+==========================
+
+.. automodule:: src.most_water_container
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Solution
+   
+   
+
+   
+   
+   
+
+
+

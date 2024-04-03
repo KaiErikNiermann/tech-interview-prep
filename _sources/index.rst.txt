@@ -6,9 +6,6 @@
 Technical interview prep materials
 ======================================
 
-Contents:
----------
-
 .. toctree:: 
    :maxdepth: 2
    :caption: Contents
