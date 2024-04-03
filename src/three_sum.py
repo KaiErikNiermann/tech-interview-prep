@@ -53,8 +53,4 @@ class Solution:
                         
         return res
                 
-
-print(Solution().threeSum([-1,0,1,2,-1,-4]))
-print(Solution().threeSum([0, 0, 0]))
-                
                 

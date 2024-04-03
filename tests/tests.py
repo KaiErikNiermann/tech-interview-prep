@@ -6,6 +6,10 @@ from src import top_k_frequent
 from src import prod_arr_except_self
 from src import longest_cons_seq
 from src import valid_palindrome
+from src import most_water_container
+from src import longest_rep_char_replacement
+from src import longest_cons_seq
+from src import longest_subs_no_repeat
 
 import unittest
 import timeout_decorator
@@ -60,6 +64,24 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(valid_palindrome.Solution().isPalindrome("ada"), True)
         self.assertEqual(valid_palindrome.Solution().isPalindrome("adaa"), False)
         self.assertEqual(valid_palindrome.Solution().isPalindrome("adaada"), True)
+        
+    @timeout_decorator.timeout(3)
+    def test_most_water_container(self):
+        self.assertEqual(most_water_container.Solution().maxArea([1,8,6,2,5,4,8,3,7]), 49)
+        self.assertEqual(most_water_container.Solution().maxArea([1,1]), 1)
+        self.assertEqual(most_water_container.Solution().maxArea([4,3,2,1,4]), 16)
+        
+    @timeout_decorator.timeout(3)
+    def test_longest_rep_char_replacement(self):
+        self.assertEqual(longest_rep_char_replacement.Solution().characterReplacement("ABAB", 2), 4)
+        self.assertEqual(longest_rep_char_replacement.Solution().characterReplacement("AABABBA", 1), 4)
+        self.assertEqual(longest_rep_char_replacement.Solution().characterReplacement("A", 1), 1)
+        
+    @timeout_decorator.timeout(3)
+    def test_longest_subs_no_repeat(self):
+        self.assertEqual(longest_subs_no_repeat.Solution().lengthOfLongestSubstring("abcabcbb"), 3)
+        self.assertEqual(longest_subs_no_repeat.Solution().lengthOfLongestSubstring("bbbbb"), 1)
+        self.assertEqual(longest_subs_no_repeat.Solution().lengthOfLongestSubstring("pwwkew"), 3)
                          
                          
 if __name__ == '__main__':
