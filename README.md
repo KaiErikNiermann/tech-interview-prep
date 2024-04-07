@@ -30,4 +30,8 @@ After rebuilding, you can view the updated documentation by opening the HTML fil
 
 ## Contributing 
 
-Feel free to contribute to any part of this project. If you spot any problems open an issue or submit a PR.
+Feel free to contribute to any part of this project. If you spot any problems open an issue or submit a PR. 
+
+### Materials 
+
+Specifically here if you know any good materials please do share, I hope this project can potentially act as a nice open source clean reference to commonly used resources.

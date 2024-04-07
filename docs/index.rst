@@ -1,33 +1,37 @@
-.. My Project documentation master file, created by
-   sphinx-quickstart on <date>.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+=============================
+Technical Interview Prep Materials
+=============================
 
-Technical interview prep materials
-======================================
+.. note::
+   As I am a student I do make mistakes. This is why I try to make sure to always include additional resources. Please if you spot any problems feel free to raise an `issue`_ or reach out to me on Discord at @appulsauce and I will fix it ASAP.
 
-.. toctree:: 
-   :maxdepth: 2
-   :caption: Contents
-
-   MATERIALS.md
-   src
-
-
-Indices and tables
+Indices and Tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+* :ref:`Module Index <modindex>`
+* :ref:`Search`
+
+.. _issue: https://github.com/KaiErikNiermann/tech-interview-prep/issues
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Table of Contents
+
+   MATERIALS.md
 
 Modules
 -------
 
-To see a list of worked out solutions for common interview problems see the `src` module.
+For a collection of worked-out solutions to common interview problems, refer to the `src` module.
 
 .. autosummary::
    :toctree: _autosummary
    :recursive:
-   
+
    src
+
+Additional Resources
+--------------------
+
+- `LeetCode Solutions by doocs <https://github.com/doocs/leetcode/tree/main/solution>`_
+- `LeetCode Solutions by neetcode-gh <https://github.com/neetcode-gh/leetcode/tree/main/python>`_
