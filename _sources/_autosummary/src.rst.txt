@@ -41,4 +41,5 @@
    src.two_sum
    src.valid_anagram
    src.valid_palindrome
+   src.valid_parenthesis
 

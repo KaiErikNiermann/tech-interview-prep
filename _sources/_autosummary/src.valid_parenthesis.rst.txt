@@ -1,0 +1,29 @@
+src.valid\_parenthesis
+======================
+
+.. automodule:: src.valid_parenthesis
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Solution
+   
+   
+
+   
+   
+   
+
+
+
