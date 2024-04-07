@@ -22,10 +22,19 @@ Main websites used by companies / for practice
     > [blind 75](https://neetcode.io/practice) seems to be a common "track" of problems people follow for prep, [neetcode](https://neetcode.io/) in general has some good prep materials 
 
 - [Codesignal](https://app.codesignal.com/)
-    > Some companies also use this, has a nice simple UI for stuff
+    > Some companies also use this, has a nice simple UI for stuff though is generally less useful than the two
+
+### competitions
+
+- [Avent of Code](https://adventofcode.com/)
+    > Every year during December AoC hosts a number of challenges each day with varying difficulty, often starting off easy, the [VUCS](https://discord.gg/MGG72qsKrn) usually has a small discussion thread for people doing it, you can also join an official leaderboard if you are a part of [STORM](https://svstorm.nl/)
+
+- [Cloudflight Coding Contest](https://register.codingcontest.org/)
 
 ### sec 
 
+- [StudSec](https://ctf.studsec.nl/challenges)
+    > Especially if you are a student at VU its a nice way to do sec related challenges while also bonding with some people
 - [Hack the Box](https://www.hackthebox.com/)
 
 ## resume template 
