@@ -10,6 +10,7 @@ from src import most_water_container
 from src import longest_rep_char_replacement
 from src import longest_cons_seq
 from src import longest_subs_no_repeat
+from src import minimum_window_substring
 
 import unittest
 import timeout_decorator
@@ -83,6 +84,12 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(longest_subs_no_repeat.Solution().lengthOfLongestSubstring("bbbbb"), 1)
         self.assertEqual(longest_subs_no_repeat.Solution().lengthOfLongestSubstring("pwwkew"), 3)
                          
+                    
+    @timeout_decorator.timeout(3)
+    def test_minimum_window_substring(self):
+        self.assertEqual(minimum_window_substring.Solution().minWindow("ADOBECODEBANC", "ABC"), "BANC")
+        self.assertEqual(minimum_window_substring.Solution().minWindow("a", "a"), "a")
+        self.assertEqual(minimum_window_substring.Solution().minWindow("a", "aa"), "")
                          
 if __name__ == '__main__':
     unittest.main()
