@@ -33,6 +33,7 @@
    src.longest_cons_seq
    src.longest_rep_char_replacement
    src.longest_subs_no_repeat
+   src.minimum_window_substring
    src.most_water_container
    src.prod_arr_except_self
    src.three_sum

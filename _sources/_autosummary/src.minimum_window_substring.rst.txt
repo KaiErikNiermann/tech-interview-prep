@@ -1,0 +1,29 @@
+src.minimum\_window\_substring
+==============================
+
+.. automodule:: src.minimum_window_substring
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Solution
+   
+   
+
+   
+   
+   
+
+
+
