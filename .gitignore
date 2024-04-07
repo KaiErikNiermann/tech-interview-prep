@@ -3,7 +3,6 @@
 .venv
 src/__pycache__/
 src/*.ipynb
-src/
 
 tests/__pycache__/
 
