@@ -11,6 +11,7 @@ from src import longest_rep_char_replacement
 from src import longest_cons_seq
 from src import longest_subs_no_repeat
 from src import minimum_window_substring
+from src import valid_parenthesis
 
 import unittest
 import timeout_decorator
@@ -90,6 +91,14 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(minimum_window_substring.Solution().minWindow("ADOBECODEBANC", "ABC"), "BANC")
         self.assertEqual(minimum_window_substring.Solution().minWindow("a", "a"), "a")
         self.assertEqual(minimum_window_substring.Solution().minWindow("a", "aa"), "")
+                     
+    @timeout_decorator.timeout(3)
+    def test_valid_parenthesis(self):
+        self.assertEqual(valid_parenthesis.Solution().isValid("()"), True)
+        self.assertEqual(valid_parenthesis.Solution().isValid("()[]{}"), True)
+        self.assertEqual(valid_parenthesis.Solution().isValid("(]"), False)
+        self.assertEqual(valid_parenthesis.Solution().isValid("([)]"), False)
+        self.assertEqual(valid_parenthesis.Solution().isValid("{[]}"), True)
                          
 if __name__ == '__main__':
     unittest.main()
