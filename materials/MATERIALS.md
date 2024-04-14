@@ -50,8 +50,6 @@ Main websites used by companies / for practice
 
 ## link summary
 
-Sure, here's a summary table of all the links provided at the bottom:
-
 | Category                | Resource                                             | Link                                                                          |
 |-------------------------|------------------------------------------------------|-------------------------------------------------------------------------------|
 | General Guide           | Guide Page                                           | [Guide Page](https://csdiscdocs.gitbook.io/vu-cs-amst-guide/cs-internships) |
@@ -67,5 +65,3 @@ Sure, here's a summary table of all the links provided at the bottom:
 |                         | Hack the Box                                         | [Hack the Box](https://www.hackthebox.com/)                                   |
 | Career Prep - Resume    | Jake's Resume                                        | [Jake's Resume](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) |
 | Career Fairs            | CS and AI 2024                                       | [CS and AI 2024](https://www.ai020.nl/#dm)                                    |
-
-This table provides a clear overview of each resource, its category, and the corresponding link.
