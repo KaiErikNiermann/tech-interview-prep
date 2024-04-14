@@ -41,5 +41,3 @@ class Solution:
                 max_area = max(max_area, (j - i) * min(height[i], height[j]))
                 
         return max_area
-
-print(Solution().maxArea([1,8,6,2,5,4,8,3,7]))

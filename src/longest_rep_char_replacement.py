@@ -33,7 +33,6 @@ class Solution:
             maxf = max(maxf, count[s[r]])
             
             if r - l + 1 - maxf > k:
-                print(r, l, maxf, count, s[l], s[r])
                 count[s[l]] -= 1
                 l += 1
                 
