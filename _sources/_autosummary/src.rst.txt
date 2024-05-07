@@ -33,10 +33,13 @@
    src.longest_cons_seq
    src.longest_rep_char_replacement
    src.longest_subs_no_repeat
+   src.merge-two-sort-l
    src.min_rot_sort_array
    src.minimum_window_substring
    src.most_water_container
    src.prod_arr_except_self
+   src.reorder-list
+   src.rev-ll
    src.search_rot_sort_array
    src.three_sum
    src.top_k_frequent
