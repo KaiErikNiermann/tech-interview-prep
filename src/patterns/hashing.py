@@ -1,0 +1,3 @@
+class Solution:
+    def hashing(self) -> None:
+        ...

@@ -1,3 +1,5 @@
+from typing import DefaultDict as defaultdict
+
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
         """
@@ -14,16 +16,16 @@ class Solution:
         """
         if t == "": return ""
 
-        subs, window = {}, {}
-        for c in t:
-            subs[c] = 1 + subs.get(c, 0)
+        subs, window = defaultdict(int), defaultdict(int)
+        for c in t: subs[c] += 1
 
         have, need = 0, len(subs)
         res, res_l = [-1, -1], float("infinity")
+        
         l = 0
         for r in range(len(s)):
             c = s[r]
-            window[c] = 1 + window.get(c, 0)
+            window[c] += 1
 
             if c in subs and window[c] == subs[c]:
                 have += 1

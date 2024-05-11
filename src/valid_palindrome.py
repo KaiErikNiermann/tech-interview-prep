@@ -59,12 +59,17 @@ class Solution:
         left, right = 0, len(s) - 1
         
         while left < right:
+            # avoid non alnum 
             while left < right and not isalphnum(s[left]):
                 left += 1
             while left < right and not isalphnum(s[right]):
                 right -= 1
+            
+            # char comparisn
             if s[left].lower() != s[right].lower():
                 return False
+            
+            # char movement
             left += 1
             right -= 1
         
