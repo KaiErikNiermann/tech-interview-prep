@@ -105,12 +105,17 @@
         <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
         
         <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">:</span>
+            <span class="c1"># avoid non alnum </span>
             <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">isalphnum</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">left</span><span class="p">]):</span>
                 <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">isalphnum</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">right</span><span class="p">]):</span>
                 <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
+            
+            <span class="c1"># char comparisn</span>
             <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">left</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="n">s</span><span class="p">[</span><span class="n">right</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                 <span class="k">return</span> <span class="kc">False</span>
+            
+            <span class="c1"># char movement</span>
             <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
         
