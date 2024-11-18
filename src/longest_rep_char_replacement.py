@@ -36,4 +36,4 @@ class Solution:
                 count[s[l]] -= 1
                 l += 1
                 
-        return len(s) - l # (r - l + 1) - (r - l + 1 - maxf) = maxf
+        return len(s) - l # ([r - l + 1]) - ([r - l + 1] - maxf) = maxf
