@@ -13,12 +13,6 @@ src.best\_buysell\_stock
 
    
    
-   .. rubric:: Classes
-
-   .. autosummary::
-   
-      Solution
-   
    
 
    
